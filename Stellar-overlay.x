@@ -227,6 +227,12 @@ case GET_SCP_STATE:
     uint32 getSCPLedgerSeq; // ledger seq requested ; if 0, requests the latest
 case SEND_MORE:
     SendMore sendMoreMessage;
+
+// Pull mode
+case FLOOD_ADVERT:
+    FloodAdvert floodAdvert;
+case FLOOD_DEMAND:
+    FloodDemand floodDemand;
 };
 
 union AuthenticatedMessage switch (uint32 v)
